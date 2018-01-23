@@ -15,4 +15,4 @@ Dependencies updated with webpack 3
 
 ## Introduced webpapack-dev-server
 
-Run with `$ gulp && gulp build-dev`
+Run with `$ gulp && gulp build-dev` and open localhost:8080
