@@ -1,15 +1,17 @@
+const path = require('path');
+
 module.exports = {
     entry: './src/js/site.js',
     output: {
-        path: './dist/js/',
+        path: path.resolve(__dirname,'./dist/js/'),
         filename: 'site.bundle.js'
     },
     module: {
-        preLoaders: [
+        rules: [
             {
-            test: /\.jsx?$/,
-            exclude: /libs/,
-            loaders: []
+                test: /\.jsx?$/,
+                exclude: /libs/,
+                loaders: []
             }
         ],
         loaders: [{
