@@ -1,10 +1,110 @@
-$color : #333;
+@import 'variables';
 
-body {
-    background: #e0e0e0;
+html, body {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    //background: grey;
+}
+  
+IMG.me {
+    content:url("https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/15940989_10211815495526809_597082559966508542_n.jpg?oh=e76e472c13928b51a8ced18507d2a1fe&oe=5AB26311");
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+IMG.back {
+    content:url("https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/23559959_1623666041031111_3693375138616379048_n.jpg?oh=09abe8ba2fba8ef0f66b2345f4e8c1c5&oe=5AE5C3C6");
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
 }
 
-H1 {
-    color: $color;
-    font-size: 50px;
+@keyframes rotateYmirror {
+    from {transform: rotate3d(0, 1, 0, 0deg);}
+    to {transform: rotate3d(0, 1, 0, 180deg);}
+}
+
+#home {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .circularContainer {
+        border: 1px solid red;
+        border-radius: 50%;
+        position: absolute;
+        box-sizing: border-box;
+    }
+    .circularContainer.center {
+        width: 24em;
+        height: 24em; 
+    }
+
+    .circularBullet {
+        width: 18em;
+        height: 60em;
+        //border: 1px solid green;
+        position: absolute;
+        box-sizing: border-box;
+
+        .rotationWrapper {
+            width: 17em;
+            height: 17em;
+        }
+        .circularContainer {
+            width: 17em;
+            height: 17em;
+            border: 2px solid $circularContainerBorder;
+            //animation-name: rotateYmirror;
+            //animation-duration: 2s;
+            animation-name: rotateYmirror;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-delay: 1s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-style: preserve-3d;
+            transform: rotate3d(0, 1, 0, 180deg);
+        }
+
+        .back,.front {
+            position: absolute;
+        }
+        .back {
+            transform:  rotateY( 180deg );
+        }
+        
+        &.one {
+            transform: rotate(10deg);
+
+            .rotationWrapper {
+                transform: rotate(-10deg);
+            }
+        }
+        &.two {
+            transform: rotate(59deg);
+
+            .rotationWrapper {
+                transform: rotate(-59deg);
+            }
+        }
+        &.three {
+            transform: rotate(108deg);
+
+            .rotationWrapper {
+                transform: rotate(-108deg);
+            }
+        }
+        &.four {
+            transform: rotate(157deg);
+
+            .rotationWrapper {
+                transform: rotate(-157deg);
+            }
+        }
+    }
 }
