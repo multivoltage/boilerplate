@@ -6,7 +6,7 @@ html, body {
     padding: 0;
     //background: grey;
 }
-  
+
 IMG.me {
     content:url("https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/15940989_10211815495526809_597082559966508542_n.jpg?oh=e76e472c13928b51a8ced18507d2a1fe&oe=5AB26311");
     border-radius: 50%;
@@ -40,7 +40,7 @@ IMG.back {
     }
     .circularContainer.center {
         width: 24em;
-        height: 24em; 
+        height: 24em;
     }
 
     .circularBullet {
@@ -68,7 +68,8 @@ IMG.back {
             justify-content: center;
             align-items: center;
             transform-style: preserve-3d;
-            transform: rotate3d(0, 1, 0, 180deg);
+            animation-fill-mode: forwards;
+            //transform: rotate3d(0, 1, 0, 180deg);
         }
 
         .back,.front {
@@ -77,7 +78,7 @@ IMG.back {
         .back {
             transform:  rotateY( 180deg );
         }
-        
+
         &.one {
             transform: rotate(10deg);
 
