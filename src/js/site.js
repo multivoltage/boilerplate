@@ -1,3 +1,8 @@
-import MyModule from "./modules/MyModule";
+import RandomFlipAnimation from "./modules/RandomFlipAnimation";
 
-MyModule.init();
+RandomFlipAnimation.init();
+
+// particlesJS.load('particles-js', '/src/js/particles.json', function() {
+//     console.log('callback - particles.js config loaded');
+// });
+

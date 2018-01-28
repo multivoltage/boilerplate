@@ -69,10 +69,15 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_MyModule__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_RandomFlipAnimation__ = __webpack_require__(1);
 
 
-__WEBPACK_IMPORTED_MODULE_0__modules_MyModule__["a" /* default */].init();
+__WEBPACK_IMPORTED_MODULE_0__modules_RandomFlipAnimation__["a" /* default */].init();
+
+// particlesJS.load('particles-js', '/src/js/particles.json', function() {
+//     console.log('callback - particles.js config loaded');
+// });
+
 
 
 /***/ }),
@@ -80,13 +85,38 @@ __WEBPACK_IMPORTED_MODULE_0__modules_MyModule__["a" /* default */].init();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var MyModule = {
+const DELTA_TIME = 3*1000;
+const ANIMATION_CLASS = 'rotateYmirrorON';
+
+var RandomFlipAnimation = {
+
+    
     init(){
-        console.log("This is my sample Module!")
+        
+        let circularContainers = document.querySelectorAll('.rotationWrapper .circularContainer');
+        circularContainers.forEach(el => {
+            setInterval(()=>{
+
+                const seconds = Math.floor((Math.random() * 5) + 1);
+                el.style.animationDelay =  seconds+"s";
+                el.classList.toggle(ANIMATION_CLASS);
+
+                this.animEl(el);
+
+            },8000);
+
+            this.animEl(el);
+        })
+    },
+
+    animEl(el){
+        const seconds = Math.floor((Math.random() * 5) + 1);
+        el.style.animationDelay =  seconds+"s";
+        el.classList.toggle(ANIMATION_CLASS);
     }
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (MyModule);
+/* harmony default export */ __webpack_exports__["a"] = (RandomFlipAnimation);
 
 
 /***/ })
