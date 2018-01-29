@@ -74,9 +74,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 __WEBPACK_IMPORTED_MODULE_0__modules_RandomFlipAnimation__["a" /* default */].init();
 
-// particlesJS.load('particles-js', '/src/js/particles.json', function() {
-//     console.log('callback - particles.js config loaded');
-// });
+particlesJS.load('particles-js', '/src/js/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+});
 
 
 
