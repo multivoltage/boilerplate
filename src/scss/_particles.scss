@@ -58,12 +58,22 @@ canvas{
       left: 0;
   }
 
-  #partile-layer {
+  #particle-layer {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
     top: 0;
     left: 0;
-    position: absolute;
-    background: white;
-    border-radius: 50%;
+
+    .round {
+      width: 80%;
+      height: 85%;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 0 250px 95px white;
+      border: 1px solid red;
+    }
   }
