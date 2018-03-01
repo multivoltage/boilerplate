@@ -36,7 +36,8 @@ IMG.back {
     align-items: center;
     height: 100vh;
     //display: none;
-    position: relative;
+    position: fixed;
+    left: 50vw;
     z-index: 2;
     transition: transform 1s;
 
@@ -160,13 +161,11 @@ IMG.back {
 #skills {
 
   z-index: 1;
-  position: fixed;
+  position: absolute;
   top: 0;
   margin-left: 30vw;
   width: 70%;
   right: 0;
-  height: 100%;
-  max-height: 100vh;
   display: flex;
   padding: 2em;
   opacity: 0;
