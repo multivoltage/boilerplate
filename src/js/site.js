@@ -10,4 +10,4 @@ particlesJS.load('particles-js', '/src/js/particles.json', function() {
 
 
 // use for debug
-document.querySelector('.four .circularContainer').click();
+//document.querySelector('.four .circularContainer').click();

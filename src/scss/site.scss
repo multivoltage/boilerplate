@@ -96,6 +96,11 @@ IMG.back {
             H1 {
                 text-decoration: underline;
             }
+
+            IMG,
+            .back {
+              pointer-events: none;
+            }
         }
 
         .back,.front {
@@ -157,9 +162,9 @@ IMG.back {
   }
 }
 
-// skills
-#skills {
-
+#skills,
+#projects, {
+  opacity: 0;
   z-index: 1;
   position: absolute;
   top: 0;
@@ -172,7 +177,7 @@ IMG.back {
   transition: opacity 1s;
   justify-content: center;
 
-  .collapsed & {
+  &.active {
     opacity: 1;
   }
 
@@ -182,27 +187,31 @@ IMG.back {
     padding: 1em;
     padding-left: 2em;
   }
+}
 
-  .importTitle {
-    margin-right: auto;
-    color: grey;
-    font-size: 2em;
-    margin: 0;
-    margin-bottom: 1em;
+.importTitle {
+  margin-right: auto;
+  color: grey;
+  font-size: 2em;
+  margin: 0;
+  margin-bottom: 1em;
 
-    &--importKeyColor {
-      color: $importKeyColor;
-    }
-    &--obj {
-      color: $importObjColor;
-    }
-    &--from {
-      color: $importFromColor;
-    }
-    &--package {
-      color: $importPackageColor;
-    }
+  &--importKeyColor {
+    color: $importKeyColor;
   }
+  &--obj {
+    color: $importObjColor;
+  }
+  &--from {
+    color: $importFromColor;
+  }
+  &--package {
+    color: $importPackageColor;
+  }
+}
+
+// skills
+#skills {
 
   .description {
     font-size: 1.5em;

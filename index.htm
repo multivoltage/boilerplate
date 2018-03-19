@@ -18,13 +18,13 @@
     <header></header>
 
     <main id="main">
-        <section id="navigator">
+        <nav id="navigator">
             <div class="circularContainer center">
 
             </div>
             <div class="circularBullet one">
                 <div class="rotationWrapper">
-                    <div class="circularContainer">
+                    <div class="circularContainer" data-sectionId="jobs">
                         <h1 class="front">MY JOBS & CV</p>
                         <img src="http://icons.iconarchive.com/icons/sicons/basic-round-social/256/linkedin-icon.png" class="back" />
                     </div>
@@ -32,7 +32,7 @@
             </div>
             <div class="circularBullet two">
                     <div class="rotationWrapper">
-                        <div class="circularContainer">
+                        <div class="circularContainer" data-sectionId="mylife">
                             <img src="https://s-i.huffpost.com/gen/1405868/images/n-SKYDIVING-PARACHUTE-628x314.jpg" class="front"/>
                             <p class="back" >MY LIFE</p>
                         </div>
@@ -40,7 +40,7 @@
             </div>
             <div class="circularBullet three">
                     <div class="rotationWrapper">
-                        <div class="circularContainer">
+                        <div class="circularContainer" data-sectionId="projects">
                             <p class="back" >MY PROJECTS</p>
                             <img src="https://cdn-images-1.medium.com/max/256/1*XgMpgjwwDrHLOiS748kpBg.png" class="front"/>
                         </div>
@@ -48,13 +48,13 @@
             </div>
             <div class="circularBullet four">
                     <div class="rotationWrapper">
-                      <div class="circularContainer">
+                      <div class="circularContainer" data-sectionId="skills">
                           <p class="back" >MY SKILLS</p>
                           <img src="https://cdn-images-1.medium.com/max/256/1*XgMpgjwwDrHLOiS748kpBg.png" class="front"/>
                       </div>
                   </div>
             </div>
-        </section>
+          </nav>
 
         <section id="skills">
           <div class="wrapper">
@@ -95,6 +95,19 @@
             <p class="description more">
               Non si finisce mai di imparere e spero tanto che in un team intraprendente possa migliorarmi ulteriormente
             </p>
+        </section>
+
+        <section id="projects">
+            <div class="wrapper">
+                <h1 class="importTitle">
+                  <span class="importTitle--importKeyColor">import</span>
+                  <span class="importTitle--bracktes">{</span>
+                  <span class="importTitle--obj">projects</span>
+                  <span class="importTitle--bracktes">}</span>
+                  <span class="importTitle--from">from</span>
+                  <span class="importTitle--package">"./Diego/experiments"</span>;
+                </h1>
+            </div>
         </section>
       </div>
     </main>
